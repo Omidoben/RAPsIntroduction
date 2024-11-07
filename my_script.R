@@ -7,6 +7,11 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
   labs(x = "Miles Per Gallon (mpg)", 
        y = "Hp")
 
+library(randomForest)
+
+rf1 <- randomForest(hp ~ mpg, data = mtcars)
+plot(rf1)
+
 library(dplyr)
 
 mtcars %>% 
